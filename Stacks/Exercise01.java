@@ -8,15 +8,16 @@ import java.util.Stack;
 
 public class Exercise01 {
     public static void main(String[] args) {
+        // Initialize the set of strings
         String p1 = "((()))";
         String p2 = "(()())";
         String p3 = "(()";
         String p4 = "())";
 
-        System.out.println("p1: " + isBalanced(p1)); // Output: true
-        System.out.println("p2: " + isBalanced(p2)); // Output: true
-        System.out.println("p3: " + isBalanced(p3)); // Output: false
-        System.out.println("p4: " + isBalanced(p4)); // Output: false
+        System.out.println("p1: " + isBalanced(p1)); // true
+        System.out.println("p2: " + isBalanced(p2)); // true
+        System.out.println("p3: " + isBalanced(p3)); // false
+        System.out.println("p4: " + isBalanced(p4)); // false
     }
 
     // Checks if a string of parentheses is balanced.

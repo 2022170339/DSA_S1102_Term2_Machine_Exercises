@@ -6,10 +6,8 @@ class Exercise03 {
         // Since the requirement is for use to input the value of the array, we will need to use
         // the utility class Scanner so that the program can accept our inputs
         Scanner scanner = new Scanner(System.in);
-
         // Declare an empty array of 5 integers
         int[] myArray = new int[5];
-
         // Initialize the sum container
         int sum = 0;
 
@@ -20,17 +18,13 @@ class Exercise03 {
             // Prompt and get the user's input
             System.out.print("#"+(i+1)+" Enter a number : ");
             int input = scanner.nextInt();
-
             // Store the input inside the array using their index
             myArray[i] = input;
-        
             // since we want to get the sum of all element, we can add this to our sum container
             sum += input;
         }
-
         // Do not forget to close the scanner when we are done
         scanner.close();
-
         // Print the result
         System.out.println("The sum of the array is: " + sum);
     } 
