@@ -22,17 +22,17 @@ public class Exercise01 {
     // Checks if a string of parentheses is balanced.
     public static boolean isBalanced(String s) {
         // Create a stack to store opening parentheses.
-        Stack<Character> stack = new Stack<>();
+        Stack<Character> myStack = new Stack<>();
 
         // Iterate through the characters in the input string.
         for (char c : s.toCharArray()) {
             // If the character is an opening parenthesis, push it onto the stack.
             if (c == '(') {
-                stack.push(c);
+                myStack.push(c);
             } else if (c == ')') {
                 // If the character is a closing parenthesis, check if the stack is empty
                 // or if the top element is not an opening parenthesis.
-                if (stack.isEmpty() || stack.pop() != '(') {
+                if (myStack.isEmpty() || myStack.pop() != '(') {
                     // In either case, return false (unbalanced).
                     return false;
                 }
@@ -40,6 +40,6 @@ public class Exercise01 {
         }
 
         // If the stack is empty, the string is balanced; otherwise, it is unbalanced.
-        return stack.isEmpty();
+        return myStack.isEmpty();
     }
 }
